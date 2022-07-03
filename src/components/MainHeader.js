@@ -6,12 +6,18 @@ const MainHeader = (props) => {
       <nav>
         <ul>
           <li>
-            <NavLink to="/welcome" activeClassName={styles.active}>
+            <NavLink
+              to="/welcome"
+              className={(navData) => (navData.isActive ? styles.active : "")}
+            >
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/products" activeClassName={styles.active}>
+            <NavLink
+              to="/products"
+              className={(navData) => (navData.isActive ? styles.active : "")}
+            >
               Products
             </NavLink>
           </li>
